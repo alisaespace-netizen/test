@@ -1876,8 +1876,24 @@ section {
 }
 
 @media (max-width: 760px) {
+  html {
+    scroll-padding-top: 88px;
+  }
+
+  body {
+    overflow-wrap: anywhere;
+  }
+
+  section {
+    scroll-margin-top: 88px;
+  }
+
   .container {
     width: min(100% - 24px, 1200px);
+  }
+
+  .section {
+    padding: 36px 0;
   }
 
   .section-benefits {
@@ -1909,6 +1925,11 @@ section {
     gap: 10px;
   }
 
+  .header {
+    backdrop-filter: blur(14px);
+    background: rgba(247, 242, 234, 0.92);
+  }
+
   .brand {
     grid-area: brand;
   }
@@ -1933,18 +1954,59 @@ section {
   }
 
   .brand-address {
-    font-size: 0.72rem;
-    line-height: 1.15;
+    min-height: 24px;
+    padding: 5px 0;
+    font-size: 0.76rem;
+    line-height: 1.2;
     margin-top: -1px;
     white-space: normal;
   }
 
   .nav-toggle {
     grid-area: toggle;
+    touch-action: manipulation;
+  }
+
+  .nav {
+    top: calc(100% + 6px);
+    left: 12px;
+    right: 12px;
+    z-index: 5;
+    gap: 2px;
+    max-height: calc(100svh - 96px);
+    padding: 10px;
+    overflow-y: auto;
+    border-radius: 20px;
+  }
+
+  .nav a {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 46px;
+    padding: 0 14px;
+    border-radius: 14px;
+    font-size: 1rem;
+  }
+
+  .nav a:active {
+    background: rgba(24, 55, 46, 0.07);
   }
 
   .hero-inner {
-    padding: 96px 0 32px;
+    padding: 70px 0 28px;
+  }
+
+  .hero-overlay {
+    background:
+      linear-gradient(90deg, rgba(14, 30, 25, 0.78) 0%, rgba(14, 30, 25, 0.58) 72%, rgba(14, 30, 25, 0.42) 100%),
+      linear-gradient(180deg, rgba(14, 30, 25, 0.2), rgba(14, 30, 25, 0.58));
+  }
+
+  .hero-text {
+    margin-top: 16px;
+    font-size: 0.98rem;
+    line-height: 1.55;
   }
 
   .hero-actions {
@@ -1955,8 +2017,11 @@ section {
 
   .hero-actions .button {
     width: min(100%, 21rem);
+    min-height: 54px;
+    padding: 10px 18px;
     justify-content: center;
     text-align: center;
+    line-height: 1.25;
   }
 
   .hero-mobile-keep {
@@ -2054,6 +2119,8 @@ section {
     scroll-behavior: smooth;
     -ms-overflow-style: none;
     scrollbar-width: none;
+    scroll-padding-inline: 0;
+    touch-action: pan-x pan-y;
   }
 
   .teachers-grid::-webkit-scrollbar {
@@ -2098,6 +2165,7 @@ section {
 
   .space-slider__viewport {
     border-radius: 24px;
+    touch-action: pan-x pan-y;
   }
 
   .space-slide {
@@ -2143,6 +2211,10 @@ section {
   .review-card {
     flex-basis: 100%;
     min-width: 100%;
+  }
+
+  .reviews-grid {
+    touch-action: pan-x pan-y;
   }
 
   .reviews-slider__arrow {
@@ -2231,6 +2303,38 @@ section {
     padding: 24px;
   }
 
+  .price-card h3 {
+    font-size: clamp(1.8rem, 9vw, 2.55rem);
+    overflow-wrap: normal;
+  }
+
+  .price-card .button {
+    width: 100%;
+    min-height: 52px;
+    padding: 10px 16px;
+    text-align: center;
+    line-height: 1.25;
+  }
+
+  .visit-contacts a,
+  .visit-contacts span {
+    width: 100%;
+    line-height: 1.45;
+  }
+
+  .visit-form input,
+  .visit-form select,
+  .visit-form textarea {
+    min-height: 52px;
+    padding: 14px 16px;
+    font-size: 16px;
+  }
+
+  .visit-form textarea {
+    min-height: 116px;
+    resize: vertical;
+  }
+
   .benefit-card {
     padding: 24px;
   }
@@ -2284,6 +2388,24 @@ section {
     width: min(100%, calc(100vw - 16px));
   }
 
+  .modal-layer {
+    padding: max(8px, env(safe-area-inset-top)) max(8px, env(safe-area-inset-right)) max(8px, env(safe-area-inset-bottom)) max(8px, env(safe-area-inset-left));
+  }
+
+  .modal-window {
+    max-height: calc(100svh - 16px);
+    border-radius: 24px;
+  }
+
+  .modal-close {
+    top: 10px;
+    right: 10px;
+    width: 46px;
+    height: 46px;
+    background: rgba(255, 252, 247, 0.92);
+    box-shadow: 0 8px 20px rgba(16, 42, 35, 0.12);
+  }
+
   .space-lightbox {
     padding: 12px;
   }
@@ -2302,6 +2424,18 @@ section {
     text-align: left;
   }
 
+  .footer-inner,
+  .footer-links {
+    width: 100%;
+  }
+
+  .footer-inner a:not(.footer-social) {
+    display: inline-flex;
+    align-items: center;
+    min-height: 40px;
+    line-height: 1.35;
+  }
+
   .audience-card {
     padding: 0;
   }
@@ -2318,6 +2452,136 @@ section {
 
   .audience-card__plus {
     display: block;
+  }
+}
+
+@media (max-width: 420px) {
+  :root {
+    --radius-xl: 26px;
+    --radius-lg: 22px;
+  }
+
+  .brand {
+    column-gap: 10px;
+  }
+
+  .brand-mark {
+    width: 44px;
+    height: 44px;
+    border-radius: 14px;
+  }
+
+  .brand-mark img {
+    width: 35px;
+  }
+
+  .brand-copy strong {
+    font-size: 0.84rem;
+  }
+
+  .brand-address {
+    font-size: 0.7rem;
+  }
+
+  .hero h1,
+  .section-heading h2,
+  .programme-copy h2,
+  .visit-copy h2,
+  .teacher-dialog__copy h3 {
+    font-size: clamp(1.92rem, 9vw, 2.45rem);
+    line-height: 1.02;
+  }
+
+  .section-label {
+    margin-bottom: 12px;
+    font-size: 0.72rem;
+    letter-spacing: 0.16em;
+  }
+
+  .audience-card,
+  .programme-card,
+  .club-card,
+  .review-card,
+  .price-card,
+  .visit-form,
+  .benefit-card,
+  .track-panel {
+    padding: 20px;
+  }
+
+  .audience-card {
+    padding: 0;
+  }
+
+  .audience-card__toggle,
+  .section-benefits .audience-card__toggle {
+    padding: 18px 20px;
+  }
+
+  .audience-card__content {
+    padding: 0 20px 20px;
+  }
+
+  .teacher-dialog__copy {
+    padding: 24px 18px 22px;
+  }
+
+  .teacher-dialog__media img {
+    width: min(68%, 210px);
+    max-height: 220px;
+  }
+
+  .space-slide img {
+    height: 58vw;
+  }
+}
+
+@media (max-width: 350px) {
+  .container {
+    width: calc(100% - 20px);
+  }
+
+  .brand-address {
+    display: none;
+  }
+
+  .brand-mark {
+    grid-row: 1;
+  }
+
+  .brand-copy {
+    align-self: center;
+  }
+
+  .hero-mobile-keep {
+    white-space: normal;
+  }
+
+  .hero-actions .button {
+    width: 100%;
+  }
+}
+
+@media (max-height: 540px) and (orientation: landscape) and (max-width: 960px) {
+  .header-inner {
+    min-height: 64px;
+  }
+
+  .hero-inner {
+    padding: 36px 0 24px;
+  }
+
+  .hero h1 {
+    font-size: clamp(2rem, 5.8vw, 3rem);
+  }
+
+  .hero-text {
+    max-width: 58rem;
+    line-height: 1.45;
+  }
+
+  .nav {
+    max-height: calc(100svh - 76px);
   }
 }
 
