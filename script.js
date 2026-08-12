@@ -181,7 +181,7 @@ const teacherData = [
     nativeLabel: "Родной язык",
     nativeLanguage: "английский",
     cardLanguage: "английский",
-    image: "./assets/teachers-all/a3fa1cd877e332c89659088d9bfc9198.JPG",
+    image: "./assets/a3fa1cd877e332c89659088d9bfc9198.JPG",
     details: [
       "12 лет преподавательского опыта",
       "Университет штата Мэн, Преск-Айл — бакалавр английского языка",
@@ -257,7 +257,7 @@ const teacherData = [
     nativeLabel: "Родной язык",
     nativeLanguage: "китайский",
     cardLanguage: "китайский",
-    image: "./assets/teachers-all/d4024cdae5ce398597111bf1fa1497de.jpeg",
+    image: "./assets/d4024cdae5ce398597111bf1fa1497de.jpeg",
     details: [
       "Преподаёт китайский язык детям с 2020 года",
       "Специализируется на пиньине, иероглифах и разговорной практике",
@@ -275,7 +275,7 @@ const teacherData = [
     nativeLabel: "Родной язык",
     nativeLanguage: "английский",
     cardLanguage: "английский",
-    image: "./assets/teachers-all/c7bbd9a7713bb1f7c955be1d0a5399b1.JPG",
+    image: "./assets/c7bbd9a7713bb1f7c955be1d0a5399b1.JPG",
     details: [
       "Университет Портсмута — бакалавр английской литературы",
       "Сертифицированный преподаватель TEFL",
@@ -294,7 +294,7 @@ const teacherData = [
     nativeLabel: "Родной язык",
     nativeLanguage: "английский",
     cardLanguage: "английский",
-    image: "./assets/teachers-all/49a0bc741e118146dc1119667ddf5b41.jpg",
+    image: "./assets/49a0bc741e118146dc1119667ddf5b41.jpg",
     details: [
       "Центральный Вашингтонский университет — современные языки, английский язык и литература",
       "Сертификат TEFL",
@@ -314,7 +314,7 @@ const teacherData = [
     nativeLabel: "Родной язык",
     nativeLanguage: "китайский",
     cardLanguage: "китайский",
-    image: "./assets/teachers-all/d7224c932e42ee2535de3763697ba759.webp",
+    image: "./assets/d7224c932e42ee2535de3763697ba759.webp",
     details: [
       "Во время учёбы в педагогическом колледже работала в школах и детских садах",
       "С раннего этапа строит занятия вокруг живого общения с детьми",
@@ -351,7 +351,7 @@ const teacherData = [
     nativeLabel: "Родной язык",
     nativeLanguage: "английский",
     cardLanguage: "английский",
-    image: "./assets/teachers-all/e0198458ca43b63a60e4a301e30a2445.JPG",
+    image: "./assets/e0198458ca43b63a60e4a301e30a2445.JPG",
     details: [
       "Милтон-Кинс, Англия — бакалавр психологии и философии",
       "Сертифицированный преподаватель английского языка (TEFL)",
@@ -368,7 +368,7 @@ const teacherData = [
     nativeLabel: "Родной язык",
     nativeLanguage: "английский",
     cardLanguage: "английский",
-    image: "./assets/teachers-all/466830019662e5e419509a2d2567729c.jpg",
+    image: "./assets/466830019662e5e419509a2d2567729c.jpg",
     details: [
       "Манчестерский университет Виктории — бакалавр гуманитарных наук",
       "Опыт преподавания по Key Stage 1 и Key Stage 2 в Великобритании",
@@ -405,7 +405,7 @@ const teacherData = [
     nativeLabel: "Родной язык",
     nativeLanguage: "русский",
     cardLanguage: "русский",
-    image: "./assets/teachers-all/natalya-ugryna-color.webp",
+    image: "./assets/natalya-ugryna-color.webp",
     details: [
       "МГПИ им. М. Е. Евсеева — дефектологический факультет",
       "АГПИ — факультет практической психологии",
@@ -442,7 +442,7 @@ const teacherData = [
     nativeLabel: "Родной язык",
     nativeLanguage: "русский",
     cardLanguage: "русский",
-    image: "./assets/teachers-all/013f8fd6f81a8e81a485eb12fa199a0b.JPG",
+    image: "./assets/013f8fd6f81a8e81a485eb12fa199a0b.JPG",
     details: [
       "Московский открытый социальный университет — социальная психология",
       "Братское государственное педагогическое училище — дошкольное воспитание",
