@@ -1,0 +1,18 @@
+# macOS metadata
+.DS_Store
+**/.DS_Store
+
+# Large source video; the site uses assets/hero-video.mp4
+assets/Timeline 1.mov
+
+# Source photo selections retained locally; optimized selected images are used by the site
+assets/3-4/
+assets/от 4/
+assets/hero-02.jpg
+assets/hero-03.jpg
+assets/teachers-all/013f8fd6f81a8e81a485eb12fa199a0b.JPG
+assets/teachers-all/6a8168f13877e61b87c3399ee64174c1.png
+assets/teachers-all/a3fa1cd877e332c89659088d9bfc9198.JPG
+assets/teachers-all/c7bbd9a7713bb1f7c955be1d0a5399b1.JPG
+assets/teachers-all/d011d676ab03ea563f5969066616bea1.jpeg
+assets/teachers-all/e0198458ca43b63a60e4a301e30a2445.JPG
