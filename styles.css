@@ -410,6 +410,101 @@ section {
   margin-top: 24px;
 }
 
+.section-video-story {
+  padding-top: 56px;
+  background: linear-gradient(180deg, rgba(255, 252, 247, 0.7), rgba(244, 238, 231, 0));
+}
+
+.video-feature {
+  display: grid;
+  gap: 28px;
+  align-items: center;
+}
+
+.video-feature--split {
+  grid-template-columns: minmax(260px, 0.72fr) minmax(0, 1.28fr);
+}
+
+.video-feature__copy h2,
+.section-heading-concert h2 {
+  margin: 0;
+  font-family: "Iowan Old Style", "Baskerville", "Times New Roman", serif;
+  font-size: clamp(2.2rem, 4.2vw, 4rem);
+  font-weight: 400;
+  line-height: 0.98;
+  letter-spacing: -0.03em;
+}
+
+.video-feature__copy p:not(.section-label),
+.section-heading-concert p:not(.section-label),
+.space-video__copy p {
+  margin: 18px 0 0;
+  color: var(--ink-soft);
+  line-height: 1.7;
+}
+
+.video-frame {
+  overflow: hidden;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--line);
+  background: #12211d;
+  box-shadow: var(--shadow);
+}
+
+.video-frame video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #12211d;
+  object-fit: contain;
+}
+
+.space-video {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.55fr) minmax(0, 1.45fr);
+  gap: 24px;
+  align-items: center;
+  margin: 28px 0 34px;
+  padding: 24px;
+  border-radius: var(--radius-xl);
+  background: rgba(255, 252, 247, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.space-video__copy h3 {
+  margin: 0;
+  font-family: "Iowan Old Style", "Baskerville", "Times New Roman", serif;
+  font-size: clamp(1.8rem, 3.2vw, 2.8rem);
+  font-weight: 400;
+  line-height: 1;
+}
+
+.space-video__copy p {
+  color: rgba(247, 242, 234, 0.76);
+}
+
+.video-frame--dark {
+  border-color: rgba(255, 255, 255, 0.14);
+  box-shadow: 0 24px 60px rgba(8, 20, 17, 0.28);
+}
+
+.section-concert {
+  padding-top: 58px;
+  background:
+    radial-gradient(circle at top right, rgba(220, 199, 164, 0.32), transparent 34%),
+    linear-gradient(180deg, #f7f2ea, #efe6dc);
+}
+
+.section-heading-concert {
+  max-width: 760px;
+  margin-bottom: 28px;
+}
+
+.video-frame--concert {
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
 .audience-card,
 .benefit-card,
 .programme-card,
@@ -1804,7 +1899,9 @@ section {
   .hero-inner,
   .programme-layout,
   .space-layout,
-  .visit-grid {
+  .visit-grid,
+  .video-feature--split,
+  .space-video {
     grid-template-columns: 1fr;
   }
 
@@ -1894,6 +1991,35 @@ section {
 
   .section {
     padding: 36px 0;
+  }
+
+  .section-video-story,
+  .section-concert {
+    padding-top: 40px;
+  }
+
+  .video-feature,
+  .space-video {
+    gap: 20px;
+  }
+
+  .video-feature__copy h2,
+  .section-heading-concert h2 {
+    font-size: clamp(2rem, 9vw, 2.8rem);
+  }
+
+  .space-video {
+    margin: 22px 0 28px;
+    padding: 18px;
+    border-radius: 24px;
+  }
+
+  .video-frame {
+    border-radius: 22px;
+  }
+
+  .section-heading-concert {
+    margin-bottom: 20px;
   }
 
   .section-benefits {
@@ -2096,6 +2222,18 @@ section {
 
   .track-panel.is-active {
     grid-template-columns: 1fr;
+  }
+
+  .track-tabs {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .track-tab {
+    width: 100%;
+    min-height: 50px;
+    padding: 0 12px;
   }
 
   .track-panel__image {
@@ -2568,20 +2706,53 @@ section {
   }
 
   .hero-inner {
-    padding: 36px 0 24px;
+    padding: 22px 0 18px;
   }
 
   .hero h1 {
-    font-size: clamp(2rem, 5.8vw, 3rem);
+    font-size: clamp(2rem, 4.8vw, 2.45rem);
+    line-height: 0.98;
   }
 
   .hero-text {
+    margin-top: 12px;
+    font-size: 0.92rem;
     max-width: 58rem;
-    line-height: 1.45;
+    line-height: 1.38;
+  }
+
+  .hero-actions {
+    gap: 10px;
+    margin-top: 14px;
+  }
+
+  .hero-actions .button {
+    min-height: 46px;
+    padding-top: 8px;
+    padding-bottom: 8px;
   }
 
   .nav {
     max-height: calc(100svh - 76px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
   }
 }
 

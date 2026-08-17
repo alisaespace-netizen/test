@@ -1,3 +1,8 @@
+// Hidden slides and tabs still need their images ready before the visitor opens them.
+document.querySelectorAll('img[loading="lazy"]').forEach((image) => {
+  image.loading = "eager";
+});
+
 const revealNodes = document.querySelectorAll(".reveal");
 
 const revealObserver = new IntersectionObserver(
@@ -23,6 +28,7 @@ navToggle?.addEventListener("click", () => {
   const isOpen = nav.classList.toggle("is-open");
   navToggle.classList.toggle("is-open", isOpen);
   navToggle.setAttribute("aria-expanded", String(isOpen));
+  navToggle.setAttribute("aria-label", isOpen ? "Закрыть меню" : "Открыть меню");
 });
 
 nav?.querySelectorAll("a").forEach((link) => {
@@ -30,7 +36,25 @@ nav?.querySelectorAll("a").forEach((link) => {
     nav.classList.remove("is-open");
     navToggle?.classList.remove("is-open");
     navToggle?.setAttribute("aria-expanded", "false");
+    navToggle?.setAttribute("aria-label", "Открыть меню");
   });
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key !== "Escape" || !nav?.classList.contains("is-open")) return;
+  nav.classList.remove("is-open");
+  navToggle?.classList.remove("is-open");
+  navToggle?.setAttribute("aria-expanded", "false");
+  navToggle?.setAttribute("aria-label", "Открыть меню");
+  navToggle?.focus();
+});
+
+window.addEventListener("resize", () => {
+  if (window.innerWidth <= 1120 || !nav?.classList.contains("is-open")) return;
+  nav.classList.remove("is-open");
+  navToggle?.classList.remove("is-open");
+  navToggle?.setAttribute("aria-expanded", "false");
+  navToggle?.setAttribute("aria-label", "Открыть меню");
 });
 
 const accordionRoots = document.querySelectorAll("[data-accordion]");
@@ -521,7 +545,7 @@ const escapeHtml = (value) =>
 
 const renderTeacherCard = (teacher) => `
   <button class="teacher-card" type="button" data-teacher-id="${escapeHtml(teacher.id)}">
-    <img src="${escapeHtml(teacher.image)}" alt="${escapeHtml(teacher.name)}" loading="lazy" />
+    <img src="${escapeHtml(teacher.image)}" alt="${escapeHtml(teacher.name)}" loading="eager" />
     <div class="teacher-card__body">
       <h3>${escapeHtml(teacher.name)}</h3>
       <p class="teacher-card__language">${escapeHtml(teacher.cardLanguage)}</p>

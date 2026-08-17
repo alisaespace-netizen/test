@@ -8,7 +8,7 @@
       name="description"
       content="Билингвальный детский сад в Хамовниках с британской программой EYFS, англоязычной средой, педагогами-носителями и дополнительными занятиями на китайском, русском и английском языках."
     />
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./styles.css?v=20260817-3" />
   </head>
   <body>
     <div class="site-shell">
@@ -32,6 +32,7 @@
             class="nav-toggle"
             id="nav-toggle"
             type="button"
+            aria-label="Открыть меню"
             aria-expanded="false"
             aria-controls="site-nav"
           >
@@ -93,6 +94,25 @@
           </div>
         </section>
 
+        <section class="section section-video-story" id="about-video">
+          <div class="container video-feature video-feature--split">
+            <div class="video-feature__copy reveal">
+              <p class="section-label">О нас</p>
+              <h2>Познакомьтесь с Park Kultury Nursery поближе</h2>
+              <p>
+                Живая английская среда, заботливые педагоги, игра, исследование
+                и творчество — короткое знакомство с атмосферой нашего сада.
+              </p>
+            </div>
+            <div class="video-frame reveal reveal-delay-1">
+              <video controls playsinline preload="metadata">
+                <source src="./assets/about-video.mp4" type="video/mp4" />
+                Ваш браузер не поддерживает воспроизведение видео.
+              </video>
+            </div>
+          </div>
+        </section>
+
         <section class="section" id="about">
           <div class="container">
             <div class="section-heading section-heading-about reveal">
@@ -137,7 +157,9 @@
                 <div class="audience-card__content" data-accordion-panel>
                   <p>
                     К окончанию программы ребёнок приобретает навыки во всех
-                    семи областях EYFS: общение и язык, физическое развитие,
+                    семи областях британской программы дошкольного образования
+                    Early Years Foundation Stage (EYFS), дополненной уровнями
+                    K1 и K2: общение и язык, физическое развитие,
                     грамотность, математика, понимание мира, искусство и
                     дизайн, личное, социальное и эмоциональное развитие.
                   </p>
@@ -253,7 +275,7 @@
 
             <div class="track-panels reveal">
               <article class="track-panel is-active" data-track-panel="nursery">
-                <img class="track-panel__image" src="./assets/group-3-4.jpg" alt="Занятие в младшей группе Park Kultury Nursery" loading="lazy" />
+                <img class="track-panel__image" src="./assets/group-3-4.jpg" alt="Занятие в младшей группе Park Kultury Nursery" loading="eager" />
                 <div class="track-panel__copy">
                   <div class="track-panel__head">
                     <h3>Nursery / Младшая группа</h3>
@@ -272,7 +294,7 @@
               </article>
 
               <article class="track-panel" data-track-panel="reception">
-                <img class="track-panel__image" src="./assets/group-4-5.jpg" alt="Творческое занятие в группе 4–5 лет Park Kultury Nursery" loading="lazy" />
+                <img class="track-panel__image" src="./assets/group-4-5.jpg" alt="Творческое занятие в группе 4–5 лет Park Kultury Nursery" loading="eager" />
                 <div class="track-panel__copy">
                   <div class="track-panel__head">
                     <h3>Reception / Средняя группа</h3>
@@ -291,7 +313,7 @@
               </article>
 
               <article class="track-panel" data-track-panel="year1">
-                <img class="track-panel__image" src="./assets/group-5-6.jpg" alt="Занятие с педагогом в группе 5–6 лет Park Kultury Nursery" loading="lazy" />
+                <img class="track-panel__image" src="./assets/group-5-6.jpg" alt="Занятие с педагогом в группе 5–6 лет Park Kultury Nursery" loading="eager" />
                 <div class="track-panel__copy">
                   <div class="track-panel__head">
                     <h3>Year 1</h3>
@@ -310,7 +332,7 @@
               </article>
 
               <article class="track-panel" data-track-panel="year2">
-                <img class="track-panel__image" src="./assets/group-6-7.jpg" alt="Учебное занятие в группе 6–7 лет Park Kultury Nursery" loading="lazy" />
+                <img class="track-panel__image" src="./assets/group-6-7.jpg" alt="Учебное занятие в группе 6–7 лет Park Kultury Nursery" loading="eager" />
                 <div class="track-panel__copy">
                   <div class="track-panel__head">
                     <h3>Year 2</h3>
@@ -405,7 +427,7 @@
                   </div>
                 </button>
                 <div class="timeline-item__content" data-accordion-panel hidden>
-                  <p>Занятия по программе EYFS в естественном, игровом формате.</p>
+                  <p>Занятия по британской программе дошкольного образования Early Years Foundation Stage (EYFS) в естественном, игровом формате.</p>
                 </div>
               </article>
               <article class="timeline-item" data-accordion-item>
@@ -436,12 +458,12 @@
                 <button class="timeline-item__toggle" type="button" aria-expanded="false" data-accordion-toggle>
                   <span class="timeline-item__time">13:00–15:30</span>
                   <div class="timeline-item__head">
-                    <h3>Проекты, игры и развитие по EYFS</h3>
+                    <h3>Проекты, игры и развитие по программе EYFS</h3>
                     <span class="timeline-item__plus" aria-hidden="true"></span>
                   </div>
                 </button>
                 <div class="timeline-item__content" data-accordion-panel hidden>
-                  <p>Основная часть программы на английском языке в разных форматах активности.</p>
+                  <p>Основная часть программы Early Years Foundation Stage (EYFS) на английском языке в разных форматах активности.</p>
                 </div>
               </article>
               <article class="timeline-item" data-accordion-item>
@@ -485,6 +507,19 @@
               </p>
             </div>
 
+            <div class="space-video reveal">
+              <div class="space-video__copy">
+                <h3>Пространство, созданное для детей</h3>
+                <p>Загляните в классы, игровые зоны и другие пространства Park Kultury Nursery.</p>
+              </div>
+              <div class="video-frame video-frame--dark">
+                <video controls playsinline preload="metadata">
+                  <source src="./assets/space-video.mp4" type="video/mp4" />
+                  Ваш браузер не поддерживает воспроизведение видео.
+                </video>
+              </div>
+            </div>
+
             <div class="space-slider reveal reveal-delay-1">
               <button class="space-slider__arrow space-slider__arrow--prev" type="button" aria-label="Предыдущая фотография" data-space-prev>
                 <span aria-hidden="true">&#8249;</span>
@@ -493,32 +528,32 @@
                 <div class="space-slider__track" id="space-slider-track">
                   <button class="space-slide" type="button" data-space-slide>
                     <span class="space-slide__pair">
-                      <img src="./assets/building.webp" alt="Здание сада Park Kultury Nursery" loading="lazy" />
-                      <img src="./assets/courtyard.webp" alt="Двор и прогулочная территория сада" loading="lazy" />
+                      <img src="./assets/building.webp" alt="Здание сада Park Kultury Nursery" loading="eager" />
+                      <img src="./assets/courtyard.webp" alt="Двор и прогулочная территория сада" loading="eager" />
                     </span>
                   </button>
                   <button class="space-slide" type="button" data-space-slide>
                     <span class="space-slide__pair">
-                      <img src="./assets/concert.jpg" alt="Праздники и выступления детей" loading="lazy" />
-                      <img src="./assets/performance.webp" alt="Театральное выступление в саду" loading="lazy" />
+                      <img src="./assets/concert.jpg" alt="Праздники и выступления детей" loading="eager" />
+                      <img src="./assets/performance.webp" alt="Театральное выступление в саду" loading="eager" />
                     </span>
                   </button>
                   <button class="space-slide" type="button" data-space-slide>
                     <span class="space-slide__pair">
-                      <img src="./assets/classroom.webp" alt="Занятия в группе Park Kultury Nursery" loading="lazy" />
-                      <img src="./assets/chinese.webp" alt="Знакомство с китайским языком" loading="lazy" />
+                      <img src="./assets/classroom.webp" alt="Занятия в группе Park Kultury Nursery" loading="eager" />
+                      <img src="./assets/chinese.webp" alt="Знакомство с китайским языком" loading="eager" />
                     </span>
                   </button>
                   <button class="space-slide" type="button" data-space-slide>
                     <span class="space-slide__pair">
-                      <img src="./assets/ballet.webp" alt="Балет и пластика" loading="lazy" />
-                      <img src="./assets/fitness.webp" alt="Физическая активность и движение" loading="lazy" />
+                      <img src="./assets/ballet.webp" alt="Балет и пластика" loading="eager" />
+                      <img src="./assets/fitness.webp" alt="Физическая активность и движение" loading="eager" />
                     </span>
                   </button>
                   <button class="space-slide" type="button" data-space-slide>
                     <span class="space-slide__pair">
-                      <img src="./assets/reading.webp" alt="Музыкальное занятие в группе" loading="lazy" />
-                      <img src="./assets/painting.webp" alt="Творческие занятия в саду" loading="lazy" />
+                      <img src="./assets/reading.webp" alt="Музыкальное занятие в группе" loading="eager" />
+                      <img src="./assets/painting.webp" alt="Творческие занятия в саду" loading="eager" />
                     </span>
                   </button>
                 </div>
@@ -543,7 +578,7 @@
             <div class="clubs-grid">
               <article class="club-card reveal">
                 <h3>Китайская студия</h3>
-                <p>Дополнительный языковой трек для детей полного дня.</p>
+                <p>Ежедневные трёхчасовые занятия с носителями китайского языка по эксклюзивной программе, специально адаптированной для дошкольников.</p>
               </article>
               <article class="club-card reveal reveal-delay-1">
                 <h3>Русская студия</h3>
@@ -559,11 +594,15 @@
               </article>
               <article class="club-card reveal reveal-delay-2">
                 <h3>Капоэйра</h3>
-                <p>Ритм, координация, физическая активность и командное взаимодействие.</p>
+                <p>Тренировки с чемпионом мира и основателем московской школы капоэйры Карлосом Альберто де Оливейра (Mestre Pepeu).</p>
               </article>
               <article class="club-card reveal">
                 <h3>Верховая езда</h3>
-                <p>Дополнительная активность по расписанию для семей полного дня.</p>
+                <p>Занятия с опытными инструкторами и нашими пони в конюшне близлежащего детского парка. Верховая езда развивает координацию, концентрацию, самостоятельность и бережное отношение к животным.</p>
+              </article>
+              <article class="club-card reveal reveal-delay-1">
+                <h3>Арт-занятия</h3>
+                <p>Живопись, графика и творческие проекты, которые развивают воображение, чувство цвета и уверенность в самовыражении.</p>
               </article>
               <article class="club-card reveal reveal-delay-1">
                 <h3>Плавание</h3>
@@ -758,6 +797,25 @@
           </div>
         </section>
 
+        <section class="section section-concert" id="concert">
+          <div class="container">
+            <div class="section-heading section-heading-concert reveal">
+              <p class="section-label">Хотите узнать больше?</p>
+              <h2>Посмотрите видео с нашего недавнего концерта</h2>
+              <p>
+                Полная запись праздника Park Kultury Nursery — выступления детей,
+                музыка и атмосфера нашего сообщества.
+              </p>
+            </div>
+            <div class="video-frame video-frame--concert reveal reveal-delay-1">
+              <video controls playsinline preload="metadata" id="concert-video">
+                <source src="https://github.com/alisaespace-netizen/test/releases/download/concert-2026/concert-full.mp4" type="video/mp4" />
+                Ваш браузер не поддерживает воспроизведение видео.
+              </video>
+            </div>
+          </div>
+        </section>
+
         <section class="section" id="visit">
           <div class="container visit-grid">
             <div class="visit-copy reveal">
@@ -811,6 +869,7 @@
             </form>
           </div>
         </section>
+
       </main>
 
       <footer class="footer">
@@ -843,6 +902,6 @@
       </div>
     </div>
 
-    <script src="./script.js"></script>
+    <script src="./script.js?v=20260817-3"></script>
   </body>
 </html>
