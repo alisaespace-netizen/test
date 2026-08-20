@@ -558,6 +558,61 @@ section {
   line-height: 1.06;
 }
 
+.about-intro-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
+  gap: 24px;
+  align-items: stretch;
+  margin-bottom: 28px;
+}
+
+.about-intro-grid .section-heading {
+  margin-bottom: 0;
+}
+
+.about-mission {
+  margin-top: 6px;
+  padding: 22px 24px;
+  border-left: 3px solid var(--gold);
+  border-radius: 0 22px 22px 0;
+  background: rgba(220, 199, 164, 0.16);
+}
+
+.about-mission h3,
+.about-reason-card h3 {
+  margin: 0;
+  font-family: "Iowan Old Style", "Baskerville", "Times New Roman", serif;
+  font-size: clamp(1.55rem, 2.5vw, 2.25rem);
+  font-weight: 400;
+  line-height: 1.08;
+}
+
+.about-mission p {
+  margin-top: 12px !important;
+}
+
+.about-reason-card {
+  align-self: stretch;
+  padding: 30px;
+  border: 1px solid rgba(220, 199, 164, 0.28);
+  border-radius: var(--radius-lg);
+  color: var(--white);
+  background:
+    radial-gradient(circle at top right, rgba(220, 199, 164, 0.2), transparent 36%),
+    linear-gradient(150deg, #1b4036, #102720);
+  box-shadow: var(--shadow);
+}
+
+.about-reason-card .section-label {
+  color: #dbc39d;
+}
+
+.about-reason-card p:not(.section-label) {
+  margin: 18px 0 0;
+  color: rgba(247, 242, 234, 0.82);
+  line-height: 1.7;
+}
+
 .section-heading-benefits h2 {
   max-width: none;
 }
@@ -1972,6 +2027,12 @@ section {
 
 }
 
+@media (max-width: 900px) {
+  .about-intro-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 760px) {
   html {
     scroll-padding-top: 88px;
@@ -1991,6 +2052,25 @@ section {
 
   .section {
     padding: 36px 0;
+  }
+
+  .about-intro-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin-bottom: 22px;
+  }
+
+  .about-mission {
+    padding: 20px;
+  }
+
+  .about-reason-card {
+    padding: 24px;
+  }
+
+  .about-reason-card p:not(.section-label) {
+    font-size: 0.96rem;
+    line-height: 1.62;
   }
 
   .section-video-story,
